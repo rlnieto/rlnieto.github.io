@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
-    <loc>http://rlnieto.github.io/camel/introducci%C3%B3n/</loc>
-  </url><url>
+    <loc>http://rlnieto.github.io/camel/conceptos/</loc>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/podman/introducci%C3%B3n/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/camel/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/podman/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/tags/</loc>
   </url>
+  
 </urlset>

@@ -8,12 +8,15 @@
     <language>es-es</language><atom:link href="http://rlnieto.github.io/camel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://rlnieto.github.io/camel/introducci%C3%B3n/</link>
+      <link>http://rlnieto.github.io/camel/conceptos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://rlnieto.github.io/camel/introducci%C3%B3n/</guid>
-      <description>Camel Lalala
-   </description>
+      <guid>http://rlnieto.github.io/camel/conceptos/</guid>
+      <description>Camel es un framework java que permite escribir código para integrar sistemas distintos
+   Route: &amp;#34;Camino&amp;#34; que se establece entre un sistema origen y uno o varios sitemas destino. Lo que se hece en Camel es definir rutas entre los sistemas a integrar y cada ruta se compone de:
+  Un sistema origen
+  Uno o varios sitemas destino
+  Un componente (component) que define cómo se comunican los sistemas origen y destino</description>
     </item>
     
   </channel>
