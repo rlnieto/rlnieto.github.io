@@ -551,17 +551,17 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">org.apache.camel.builder.RouteBuilder</span><span class="o">;</span>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.apache.camel.builder.RouteBuilder;
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloWorldRoute</span> <span class="kd">extends</span> <span class="nc">RouteBuilder</span> <span class="o">{</span>
-<span class="err">    </span><span class="nd">@Override</span>
-<span class="err">    </span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
-        <span class="c1">// Definimos la ruta</span>
-<span class="err">        </span><span class="n">from</span><span class="o">(</span><span class="s">&#34;timer:example?period=2000&#34;</span><span class="o">)</span>               <span class="c1">// Sistema origen (from)</span>
-<span class="err">        </span><span class="o">.</span><span class="na">setBody</span><span class="o">(</span><span class="n">constant</span><span class="o">(</span><span class="s">&#34;Hello World&#34;</span><span class="o">))</span>               <span class="c1">// Proceso (datos que viajan entre sistemas)</span>
-<span class="err">        </span><span class="o">.</span><span class="na">to</span><span class="o">(</span><span class="s">&#34;log:&#34;</span> <span class="o">+</span> <span class="nc">HelloWorldRoute</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">);</span> <span class="c1">// Sistema destino (to)</span>
-<span class="err">    </span><span class="o">}</span>
-<span class="o">}</span></code></pre>
+public class HelloWorldRoute extends RouteBuilder {
+    @Override
+    public void configure() throws Exception {
+        // Definimos la ruta
+        from(&#34;timer:example?period=2000&#34;)               // Sistema origen (from)
+        .setBody(constant(&#34;Hello World&#34;))               // Proceso (datos que viajan entre sistemas)
+        .to(&#34;log:&#34; + HelloWorldRoute.class.getName() ); // Sistema destino (to)
+    }
+}</code></pre>
 </div>
 </div>
 
