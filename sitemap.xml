@@ -3,31 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://rlnieto.github.io/camel/conceptos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://rlnieto.github.io/open-management-practices/conceptos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://rlnieto.github.io/podman/introducci%C3%B3n/</loc>
-  </url>
-  
-  <url>
     <loc>http://rlnieto.github.io/camel/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rlnieto.github.io/camel/conceptos/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rlnieto.github.io/camel/otras-cosas/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://rlnieto.github.io/dark-mode/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://rlnieto.github.io/</loc>
-  </url>
-  
-  <url>
-    <loc>http://rlnieto.github.io/open-management-practices/</loc>
-  </url>
-  
-  <url>
-    <loc>http://rlnieto.github.io/podman/</loc>
   </url>
   
   <url>

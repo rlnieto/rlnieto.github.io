@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Documentación</title>
-    <link>http://rlnieto.github.io/</link>
+    <link>http://rlnieto.github.io/camel/conceptos/</link>
     <description>Recent content on Documentación</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>es-es</language><atom:link href="http://rlnieto.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>es-es</language><atom:link href="http://rlnieto.github.io/camel/conceptos/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
