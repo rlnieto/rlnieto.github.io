@@ -5,7 +5,7 @@
 <meta name="referrer" content="no-referrer" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="color-scheme" content="light dark" />
-<meta name="generator" content="Hugo 0.93.2" />
+<meta name="generator" content="Hugo 0.80.0" />
 
 
   <meta name="description" content="Camel es un framework java que permite escribir código para integrar sistemas distintos
@@ -389,6 +389,84 @@
               
             >
               
+                <span class="flex">Open management practices</span>
+              
+              
+            </label>
+
+            
+              
+  
+
+
+  <ul class="gdoc-nav__list">
+    
+    
+      
+
+      
+        
+      
+
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
+                <span class="flex">Conceptos</span>
+              
+              
+            </label>
+
+            
+          </li>
+        
+      
+    
+  </ul>
+
+            
+          </li>
+        
+      
+        
+
+          
+          
+          
+          
+          
+          
+
+
+          <li>
+            <input
+              type="checkbox"
+              
+                class="hidden"
+              
+            />
+            <label
+              
+            >
+              
                 <span class="flex">Podman</span>
               
               
@@ -551,15 +629,15 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.apache.camel.builder.RouteBuilder;
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.apache.camel.builder.RouteBuilder</span>;
 
-public class HelloWorldRoute extends RouteBuilder {
-    @Override
-    public void configure() throws Exception {
-        // Definimos la ruta
-        from(&#34;timer:example?period=2000&#34;)               // Sistema origen (from)
-        .setBody(constant(&#34;Hello World&#34;))               // Proceso (datos que viajan entre sistemas)
-        .to(&#34;log:&#34; + HelloWorldRoute.class.getName() ); // Sistema destino (to)
+<span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HelloWorldRoute</span> <span style="color: #008000; font-weight: bold">extends</span> RouteBuilder {
+    <span style="color: #AA22FF">@Override</span>
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">configure</span>() <span style="color: #008000; font-weight: bold">throws</span> Exception {
+        <span style="color: #408080; font-style: italic">// Definimos la ruta</span>
+        from(<span style="color: #BA2121">&#34;timer:example?period=2000&#34;</span>)               <span style="color: #408080; font-style: italic">// Sistema origen (from)</span>
+        .<span style="color: #7D9029">setBody</span>(constant(<span style="color: #BA2121">&#34;Hello World&#34;</span>))               <span style="color: #408080; font-style: italic">// Proceso (datos que viajan entre sistemas)</span>
+        .<span style="color: #7D9029">to</span>(<span style="color: #BA2121">&#34;log:&#34;</span> <span style="color: #666666">+</span> HelloWorldRoute.<span style="color: #7D9029">class</span>.<span style="color: #7D9029">getName</span>() ); <span style="color: #408080; font-style: italic">// Sistema destino (to)</span>
     }
 }</code></pre>
 </div>
