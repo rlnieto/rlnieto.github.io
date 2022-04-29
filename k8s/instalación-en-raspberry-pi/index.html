@@ -8,8 +8,12 @@
 <meta name="generator" content="Hugo 0.80.0" />
 
 
+  <meta name="description" content="1. Instalar microK8s en Raspberry pi URL: https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes
+   Habilitamos c-groups añadiendo a cmdline.txt lo siguiente (el fichero debe de tener solamente una línea, son los parámetros que se pasan al kernel al iniciarlo):
+   cgroup_enable=memory cgroup_memory=1     Instalamos microK8s en todos los nodos que vayamos a utilizar:
+   # Si queremos una versión específica añadimos un parámetro mas con el channel: # --channel=1." />
 
-    <title>Camel | Documentación</title>
+    <title>Instalación en Raspberry Pi | Documentación</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
 <link
@@ -30,34 +34,43 @@
     
   <meta
     property="og:title"
-    content="Camel"
+    content="Instalación en Raspberry Pi"
   />
   <meta property="og:site_name" content="Documentación" />
+  <meta property="og:description" content="1. Instalar microK8s en Raspberry pi URL: https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes
+   Habilitamos c-groups añadiendo a cmdline.txt lo siguiente (el fichero debe de tener solamente una línea, son los parámetros que se pasan al kernel al iniciarlo):
+   cgroup_enable=memory cgroup_memory=1     Instalamos microK8s en todos los nodos que vayamos a utilizar:
+   # Si queremos una versión específica añadimos un parámetro mas con el channel: # --channel=1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://rlnieto.github.io/camel/" />
+<meta property="og:url" content="http://rlnieto.github.io/k8s/instalaci%C3%B3n-en-raspberry-pi/" />
 
-<meta property="article:section" content="Camel" />
+<meta property="article:section" content="K8s" />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Camel" />
+<meta name="twitter:title" content="Instalación en Raspberry Pi" />
+  <meta name="twitter:description" content="1. Instalar microK8s en Raspberry pi URL: https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes
+   Habilitamos c-groups añadiendo a cmdline.txt lo siguiente (el fichero debe de tener solamente una línea, son los parámetros que se pasan al kernel al iniciarlo):
+   cgroup_enable=memory cgroup_memory=1     Instalamos microK8s en todos los nodos que vayamos a utilizar:
+   # Si queremos una versión específica añadimos un parámetro mas con el channel: # --channel=1." />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "TechArticle",
-      "articleSection": "Camel",
-      "name": "Camel",
-      "url" : "http://rlnieto.github.io/camel/",
-      "headline": "Camel",
-      "wordCount" : "0",
+      "articleSection": "K8s",
+      "name": "Instalación en Raspberry Pi",
+      "url" : "http://rlnieto.github.io/k8s/instalaci%C3%B3n-en-raspberry-pi/",
+      "headline": "Instalación en Raspberry Pi",
+      "description": "1. Instalar microK8s en Raspberry pi URL: https:\/\/ubuntu.com\/tutorials\/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes\n   Habilitamos c-groups añadiendo a cmdline.txt lo siguiente (el fichero debe de tener solamente una línea, son los parámetros que se pasan al kernel al iniciarlo):\n   cgroup_enable=memory cgroup_memory=1     Instalamos microK8s en todos los nodos que vayamos a utilizar:\n   # Si queremos una versión específica añadimos un parámetro mas con el channel: # --channel=1.",
+      "wordCount" : "233",
       "license": "CC BY-SA 4.0",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "http://rlnieto.github.io/camel/"
+          "@id": "http://rlnieto.github.io/k8s/instalaci%C3%B3n-en-raspberry-pi/"
       },
       "copyrightHolder" : "Documentación",
       "copyrightYear" : "0001",
@@ -139,7 +152,7 @@
   href="/custom.css"
   media="all"
 />
-  <link href="http://rlnieto.github.io/camel/" rel="canonical" type="text/html" />
+  <link href="http://rlnieto.github.io/k8s/instalaci%C3%B3n-en-raspberry-pi/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -417,7 +430,7 @@
                 <span class="flex">
                   <a
                     href="/k8s/instalaci%C3%B3n-en-raspberry-pi/"
-                    class="gdoc-nav__entry"
+                    class="gdoc-nav__entry is-active"
                   >
                     Instalación en Raspberry Pi
                   </a>
@@ -527,8 +540,96 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>Camel</h1>
+    <h1>Instalación en Raspberry Pi</h1>
     
+<div class="sect1">
+<h2 id="_instalar_microk8s_en_raspberry_pi">1. Instalar microK8s en Raspberry pi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>URL: <a href="https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes" class="bare">https://ubuntu.com/tutorials/how-to-kubernetes-cluster-on-raspberry-pi#5-master-node-and-leaf-nodes</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Habilitamos c-groups añadiendo a <strong>cmdline.txt</strong> lo siguiente (el fichero debe de tener solamente una línea, son los parámetros que se pasan al kernel al iniciarlo):</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cgroup_enable=memory cgroup_memory=1</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Instalamos microK8s en todos los nodos que vayamos a utilizar:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Si queremos una versión específica añadimos un parámetro mas con el channel:
+#  --channel=1.17/stable
+sudo snap install microK8s --classic
+
+# Para ver la versión que se ha instalado:
+snap info microk8s</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuramos el nodo maestro:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Este comando hace que el nodo se configure como master y nos devuelve
+# la cadena de conexión que necesitamos ejecutar en cada nodo que queramos
+# unir al cluster, ya sea como master o worker.
+# El formato de la cadena de conexión es: &lt;ip_cluster&gt;:&lt;puerto&gt;/&lt;token&gt;
+sudo microk8s.add-node
+
+# Ejecutamos esto en los nodos que queremos añadir al cluster (control plane)
+sudo microk8s join 192.168.0.19:25000/73fb523955fbe0ad68b88e15329082bf/b2365c457adc
+
+# Ejecutamos esto en los nodos que queremos añadir al cluster como workers
+sudo microk8s join 192.168.0.19:25000/73fb523955fbe0ad68b88e15329082bf/b2365c457adc --worker</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_comandos_microk8s">1.1. Comandos MicroK8s</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>microk8s.start</strong>: arranca los servicios de kubernetes.</p>
+</li>
+<li>
+<p><strong>microk8s.inspect</strong>: muestra el estado de los servicios</p>
+</li>
+<li>
+<p><strong>services: microk8s.stop</strong>: para los servicios</p>
+</li>
+<li>
+<p><strong>microk8s.enable &lt;addon&gt;</strong>: habilita un addon (ej.: microk8s.enable dns)</p>
+</li>
+<li>
+<p><strong>microk8s.kubectl cluster-info</strong>: muestra el estado del cluster</p>
+</li>
+<li>
+<p><strong>microk8s.kubectl get node</strong>: muetra los nodos del cluster (hay que ejecutarlo en el master)</p>
+</li>
+<li>
+<p><strong>sudo microk8s remove-node &lt;node name&gt;</strong>: elimina un nodo del cluster (se ejecuta en el nodo que queremos sacar)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
   </article>
 
 
