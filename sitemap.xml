@@ -13,6 +13,10 @@
   </url>
   
   <url>
+    <loc>http://rlnieto.github.io/java/a%C3%B1adir-un-certificado-al-jdk/</loc>
+  </url>
+  
+  <url>
     <loc>http://rlnieto.github.io/k8s/</loc>
     <priority>0</priority>
   </url>
@@ -23,12 +27,11 @@
   </url>
   
   <url>
-    <loc>http://rlnieto.github.io/podman/</loc>
-    <priority>0</priority>
+    <loc>http://rlnieto.github.io/</loc>
   </url>
   
   <url>
-    <loc>http://rlnieto.github.io/</loc>
+    <loc>http://rlnieto.github.io/java/</loc>
   </url>
   
   <url>
