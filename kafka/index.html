@@ -8,13 +8,10 @@
 <meta name="generator" content="Hugo 0.80.0" />
 
 
-  <meta name="description" content="Se hace con la herramienta keytool que está en $JAVA_HOME/bin:
-   Para saber dónde está el almacén por defecto (la password por defecto del almacén cacerts es changeit):
-   readlink -f /usr/bin/java | sed &#34;s:bin/java::&#34; &#43; /lib/security/cacert     Añadir un certificado:
-   sudo keytool -import -alias &lt;alias&gt; -file &lt;fichero_certificado&gt;.cer -storetype JKS -keystore &lt;nombre_keystore&gt;     Eliminar un certificado:
-   sudo keytool -delete -alias &lt;alias&gt; -keystore &lt;nombre_keystore&gt;     Ver los certificados de un almacén:" />
+  <meta name="description" content="1. General Crear un topic desde consola [REVISAR: creo que se puede hacer directamente contra el broker]:
+  bin/kafka-topics.sh --create \ --zookeeper localhost:2181 \ --replication-factor 1 --partitions 1 \ --topic mytopic     2. Spring &#43; kafka  Añadimos al pom la dependencia   &lt;dependency&gt; &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt; &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt; &lt;version&gt;2.7.2&lt;/version&gt; &lt;/dependency&gt;    Creamos 3 clases de configuración (conexión, productores, consumidores)    Configuración general: define la conexión y crea los tópicos automáticamente" />
 
-    <title>Añadir Un Certificado Al J D K | Documentación</title>
+    <title>Kafka | Documentación</title>
 
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
 <link
@@ -35,45 +32,39 @@
     
   <meta
     property="og:title"
-    content="Añadir Un Certificado Al J D K"
+    content="Kafka"
   />
   <meta property="og:site_name" content="Documentación" />
-  <meta property="og:description" content="Se hace con la herramienta keytool que está en $JAVA_HOME/bin:
-   Para saber dónde está el almacén por defecto (la password por defecto del almacén cacerts es changeit):
-   readlink -f /usr/bin/java | sed &#34;s:bin/java::&#34; &#43; /lib/security/cacert     Añadir un certificado:
-   sudo keytool -import -alias &lt;alias&gt; -file &lt;fichero_certificado&gt;.cer -storetype JKS -keystore &lt;nombre_keystore&gt;     Eliminar un certificado:
-   sudo keytool -delete -alias &lt;alias&gt; -keystore &lt;nombre_keystore&gt;     Ver los certificados de un almacén:" />
+  <meta property="og:description" content="1. General Crear un topic desde consola [REVISAR: creo que se puede hacer directamente contra el broker]:
+  bin/kafka-topics.sh --create \ --zookeeper localhost:2181 \ --replication-factor 1 --partitions 1 \ --topic mytopic     2. Spring &#43; kafka  Añadimos al pom la dependencia   &lt;dependency&gt; &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt; &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt; &lt;version&gt;2.7.2&lt;/version&gt; &lt;/dependency&gt;    Creamos 3 clases de configuración (conexión, productores, consumidores)    Configuración general: define la conexión y crea los tópicos automáticamente" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://rlnieto.github.io/java/a%C3%B1adir-un-certificado-al-jdk/" />
+<meta property="og:url" content="http://rlnieto.github.io/kafka/" />
 
-<meta property="article:section" content="Java" />
+<meta property="article:section" content="Kafka" />
 
 
   <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Añadir Un Certificado Al J D K" />
-  <meta name="twitter:description" content="Se hace con la herramienta keytool que está en $JAVA_HOME/bin:
-   Para saber dónde está el almacén por defecto (la password por defecto del almacén cacerts es changeit):
-   readlink -f /usr/bin/java | sed &#34;s:bin/java::&#34; &#43; /lib/security/cacert     Añadir un certificado:
-   sudo keytool -import -alias &lt;alias&gt; -file &lt;fichero_certificado&gt;.cer -storetype JKS -keystore &lt;nombre_keystore&gt;     Eliminar un certificado:
-   sudo keytool -delete -alias &lt;alias&gt; -keystore &lt;nombre_keystore&gt;     Ver los certificados de un almacén:" />
+<meta name="twitter:title" content="Kafka" />
+  <meta name="twitter:description" content="1. General Crear un topic desde consola [REVISAR: creo que se puede hacer directamente contra el broker]:
+  bin/kafka-topics.sh --create \ --zookeeper localhost:2181 \ --replication-factor 1 --partitions 1 \ --topic mytopic     2. Spring &#43; kafka  Añadimos al pom la dependencia   &lt;dependency&gt; &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt; &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt; &lt;version&gt;2.7.2&lt;/version&gt; &lt;/dependency&gt;    Creamos 3 clases de configuración (conexión, productores, consumidores)    Configuración general: define la conexión y crea los tópicos automáticamente" />
 
 
   <script type="application/ld+json">
   {
       "@context": "http://schema.org",
       "@type": "TechArticle",
-      "articleSection": "Java",
-      "name": "Añadir Un Certificado Al J D K",
-      "url" : "http://rlnieto.github.io/java/a%C3%B1adir-un-certificado-al-jdk/",
-      "headline": "Añadir Un Certificado Al J D K",
-      "description": "Se hace con la herramienta keytool que está en $JAVA_HOME\/bin:\n   Para saber dónde está el almacén por defecto (la password por defecto del almacén cacerts es changeit):\n   readlink -f \/usr\/bin\/java | sed \u0022s:bin\/java::\u0022 \u002b \/lib\/security\/cacert     Añadir un certificado:\n   sudo keytool -import -alias \u003calias\u003e -file \u003cfichero_certificado\u003e.cer -storetype JKS -keystore \u003cnombre_keystore\u003e     Eliminar un certificado:\n   sudo keytool -delete -alias \u003calias\u003e -keystore \u003cnombre_keystore\u003e     Ver los certificados de un almacén:",
-      "wordCount" : "71",
+      "articleSection": "Kafka",
+      "name": "Kafka",
+      "url" : "http://rlnieto.github.io/kafka/",
+      "headline": "Kafka",
+      "description": "1. General Crear un topic desde consola [REVISAR: creo que se puede hacer directamente contra el broker]:\n  bin\/kafka-topics.sh --create \\ --zookeeper localhost:2181 \\ --replication-factor 1 --partitions 1 \\ --topic mytopic     2. Spring \u002b kafka  Añadimos al pom la dependencia   \u003cdependency\u003e \u003cgroupId\u003eorg.springframework.kafka\u003c\/groupId\u003e \u003cartifactId\u003espring-kafka\u003c\/artifactId\u003e \u003cversion\u003e2.7.2\u003c\/version\u003e \u003c\/dependency\u003e    Creamos 3 clases de configuración (conexión, productores, consumidores)    Configuración general: define la conexión y crea los tópicos automáticamente",
+      "wordCount" : "348",
       "license": "CC BY-SA 4.0",
       "inLanguage": "en",
       "isFamilyFriendly": "true",
       "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "http://rlnieto.github.io/java/a%C3%B1adir-un-certificado-al-jdk/"
+          "@id": "http://rlnieto.github.io/kafka/"
       },
       "copyrightHolder" : "Documentación",
       "copyrightYear" : "0001",
@@ -155,7 +146,7 @@
   href="/custom.css"
   media="all"
 />
-  <link href="http://rlnieto.github.io/java/a%C3%B1adir-un-certificado-al-jdk/" rel="canonical" type="text/html" />
+  <link href="http://rlnieto.github.io/kafka/" rel="canonical" type="text/html" />
 
 <!-- Made with Geekdoc theme https://github.com/thegeeklab/hugo-geekdoc -->
 
@@ -477,7 +468,7 @@
                 <span class="flex">
                   <a
                     href="/kafka/"
-                    class="gdoc-nav__entry"
+                    class="gdoc-nav__entry is-active"
                   >
                     Kafka
                   </a>
@@ -555,7 +546,7 @@
                 <span class="flex">
                   <a
                     href="/java/a%C3%B1adir-un-certificado-al-jdk/"
-                    class="gdoc-nav__entry is-active"
+                    class="gdoc-nav__entry"
                   >
                     Añadir Un Certificado Al J D K
                   </a>
@@ -628,56 +619,188 @@
   <article
     class="gdoc-markdown gdoc-markdown__align--left"
   >
-    <h1>Añadir Un Certificado Al J D K</h1>
-    <div class="paragraph">
-<p>Se hace con la herramienta <strong>keytool</strong> que está en <strong>$JAVA_HOME/bin</strong>:</p>
+    <h1>Kafka</h1>
+    
+<div class="sect1">
+<h2 id="_general">1. General</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Crear un topic desde consola [REVISAR: creo que se puede hacer directamente contra el broker]:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="bash"><span></span> bin/kafka-topics.sh --create <span style="color: #BB6622; font-weight: bold">\</span>
+  --zookeeper localhost:2181 <span style="color: #BB6622; font-weight: bold">\</span>
+  --replication-factor <span style="color: #666666">1</span> --partitions <span style="color: #666666">1</span> <span style="color: #BB6622; font-weight: bold">\</span>
+  --topic mytopic</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spring_kafka">2. Spring + kafka</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Añadimos al pom la dependencia</dt>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="xml"><span></span><span style="color: #008000; font-weight: bold">&lt;dependency&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;groupId&gt;</span>org.springframework.kafka<span style="color: #008000; font-weight: bold">&lt;/groupId&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;artifactId&gt;</span>spring-kafka<span style="color: #008000; font-weight: bold">&lt;/artifactId&gt;</span>
+    <span style="color: #008000; font-weight: bold">&lt;version&gt;</span>2.7.2<span style="color: #008000; font-weight: bold">&lt;/version&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/dependency&gt;</span></code></pre>
+</div>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Creamos 3 clases de configuración (conexión, productores, consumidores)</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuración general: define la conexión y crea los tópicos automáticamente</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.apache.kafka.clients.admin.AdminClientConfig</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.apache.kafka.clients.admin.NewTopic</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.beans.factory.annotation.Value</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.context.annotation.Bean</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.context.annotation.Configuration</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.kafka.core.KafkaAdmin</span>;
+
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">java.util.HashMap</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">java.util.Map</span>;
+
+<span style="color: #AA22FF">@Configuration</span>
+<span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">KafkaTopicConfig</span> {
+
+    <span style="color: #AA22FF">@Value</span>(value <span style="color: #666666">=</span> <span style="color: #BA2121">&#34;${kafka.bootstrapAddress}&#34;</span>)
+    <span style="color: #008000; font-weight: bold">private</span> String bootstrapAddress;
+
+    <span style="color: #408080; font-style: italic">/**</span>
+<span style="color: #408080; font-style: italic">     * El bean KafkaAdmin es específico de spring kafka y crea automáticamente</span>
+<span style="color: #408080; font-style: italic">     * todos los topics especificados en los bean de tipo NewTopic</span>
+<span style="color: #408080; font-style: italic">     *</span>
+<span style="color: #408080; font-style: italic">     * @return</span>
+<span style="color: #408080; font-style: italic">     */</span>
+    <span style="color: #AA22FF">@Bean</span>
+    <span style="color: #008000; font-weight: bold">public</span> KafkaAdmin <span style="color: #0000FF">kafkaAdmin</span>() {
+        Map<span style="color: #666666">&lt;</span>String, Object<span style="color: #666666">&gt;</span> configs <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> HashMap<span style="color: #666666">&lt;&gt;</span>();
+        configs.<span style="color: #7D9029">put</span>(AdminClientConfig.<span style="color: #7D9029">BOOTSTRAP_SERVERS_CONFIG</span>, bootstrapAddress);
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">new</span> KafkaAdmin(configs);
+    }
+
+    <span style="color: #408080; font-style: italic">// Con la anotación @Bean spring registra el objeto devuelto como un bean y lo guarda en el contexto</span>
+    <span style="color: #408080; font-style: italic">// de la aplicación</span>
+    <span style="color: #AA22FF">@Bean</span>
+    <span style="color: #008000; font-weight: bold">public</span> NewTopic <span style="color: #0000FF">nuevoTopic</span>() {
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">new</span> NewTopic(<span style="color: #BA2121">&#34;pruebasKafka&#34;</span>, <span style="color: #666666">1</span>, (<span style="color: #B00040">short</span>) <span style="color: #666666">1</span>);
+    }
+
+}</code></pre>
+</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Para saber dónde está el almacén por defecto (la password por defecto del almacén <strong>cacerts</strong> es <strong>changeit</strong>):</p>
+<p>Para los productores: define un bean de tipo KafkaTemplate para gestionar el envío de mensajes al broker</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>readlink -f /usr/bin/java | sed &#34;s:bin/java::&#34; + /lib/security/cacert</pre>
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.apache.kafka.clients.producer.ProducerConfig</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.apache.kafka.common.serialization.StringSerializer</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.beans.factory.annotation.Value</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.context.annotation.Bean</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.context.annotation.Configuration</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.kafka.core.DefaultKafkaProducerFactory</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.kafka.core.KafkaTemplate</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.kafka.core.ProducerFactory</span>;
+
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">java.util.HashMap</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">java.util.Map</span>;
+
+<span style="color: #AA22FF">@Configuration</span>
+<span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">KafkaProducerConfig</span> {
+
+    <span style="color: #AA22FF">@Value</span>(value <span style="color: #666666">=</span> <span style="color: #BA2121">&#34;${kafka.bootstrapAddress}&#34;</span>)
+    <span style="color: #008000; font-weight: bold">private</span> String bootstrapAddress;
+
+    <span style="color: #408080; font-style: italic">/**</span>
+<span style="color: #408080; font-style: italic">     * Registramos un bean de tipo ProducerFactory</span>
+<span style="color: #408080; font-style: italic">     *</span>
+<span style="color: #408080; font-style: italic">     * @return</span>
+<span style="color: #408080; font-style: italic">     */</span>
+    <span style="color: #AA22FF">@Bean</span>
+    <span style="color: #008000; font-weight: bold">public</span> ProducerFactory<span style="color: #666666">&lt;</span>String, String<span style="color: #666666">&gt;</span> <span style="color: #0000FF">producerFactory</span>() {
+        Map<span style="color: #666666">&lt;</span>String, Object<span style="color: #666666">&gt;</span> configProps <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">new</span> HashMap<span style="color: #666666">&lt;&gt;</span>();
+
+        configProps.<span style="color: #7D9029">put</span>(ProducerConfig.<span style="color: #7D9029">BOOTSTRAP_SERVERS_CONFIG</span>, bootstrapAddress);
+        configProps.<span style="color: #7D9029">put</span>(ProducerConfig.<span style="color: #7D9029">KEY_SERIALIZER_CLASS_CONFIG</span>, StringSerializer.<span style="color: #7D9029">class</span>);
+        configProps.<span style="color: #7D9029">put</span>(ProducerConfig.<span style="color: #7D9029">VALUE_SERIALIZER_CLASS_CONFIG</span>, StringSerializer.<span style="color: #7D9029">class</span>);
+        configProps.<span style="color: #7D9029">put</span>(ProducerConfig.<span style="color: #7D9029">MAX_REQUEST_SIZE_CONFIG</span>, <span style="color: #BA2121">&#34;20971520&#34;</span>);
+
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">new</span> DefaultKafkaProducerFactory<span style="color: #666666">&lt;&gt;</span>(configProps);
+    }
+
+    <span style="color: #408080; font-style: italic">/**</span>
+<span style="color: #408080; font-style: italic">     * Registramos un bean de tipo KafkaTemplate que maneja el envío de mensajes al broker</span>
+<span style="color: #408080; font-style: italic">     * @return</span>
+<span style="color: #408080; font-style: italic">     */</span>
+    <span style="color: #AA22FF">@Bean</span>
+    <span style="color: #008000; font-weight: bold">public</span> KafkaTemplate<span style="color: #666666">&lt;</span>String, String<span style="color: #666666">&gt;</span> <span style="color: #0000FF">kafkaTemplate</span>() {
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">new</span> KafkaTemplate<span style="color: #666666">&lt;&gt;</span>(producerFactory());
+    }
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Añadir un certificado:</p>
+<p>Para los consumidores</p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Ejemplo de uso desde la aplicación spring boot</dt>
+</dl>
+</div>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>sudo keytool -import -alias &lt;alias&gt; -file &lt;fichero_certificado&gt;.cer -storetype JKS -keystore &lt;nombre_keystore&gt;</pre>
+<pre>package org.rlnieto.pruebas;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.kafka.core.KafkaTemplate;
+
+@SpringBootApplication
+public class App
+{
+    public static void main( String[] args )
+    {
+        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+
+        // Ya tenemos la conexión con el broker, podemos enviar y leer mensajes
+        KafkaTemplate kafkaTemplate = context.getBean(KafkaTemplate.class);
+
+        kafkaTemplate.send(&#34;pruebasKafka&#34;, &#34;Prueba de envío de mensaje&#34;);
+
+    }
+}</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Eliminar un certificado:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo keytool -delete -alias &lt;alias&gt; -keystore &lt;nombre_keystore&gt;</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ver los certificados de un almacén:</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>sudo keytool -v -list -keystore &lt;nombre_keystore&gt;</pre>
 </div>
 </div>
 
