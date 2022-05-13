@@ -768,37 +768,35 @@
 <ul>
 <li>
 <p>Para los consumidores</p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Ejemplo de uso desde la aplicación spring boot</dt>
-</dl>
-</div>
+</li>
+<li>
+<p>Ejemplo de uso desde la aplicación spring boot</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>package org.rlnieto.pruebas;
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="java"><span></span><span style="color: #008000; font-weight: bold">package</span> <span style="color: #0000FF; font-weight: bold">org.rlnieto.pruebas</span>;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.kafka.core.KafkaTemplate;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.boot.SpringApplication</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.boot.autoconfigure.SpringBootApplication</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.context.ConfigurableApplicationContext</span>;
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">org.springframework.kafka.core.KafkaTemplate</span>;
 
-@SpringBootApplication
-public class App
+<span style="color: #AA22FF">@SpringBootApplication</span>
+<span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">App</span>
 {
-    public static void main( String[] args )
+    <span style="color: #008000; font-weight: bold">public</span> <span style="color: #008000; font-weight: bold">static</span> <span style="color: #B00040">void</span> <span style="color: #0000FF">main</span>( String<span style="color: #666666">[]</span> args )
     {
-        ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+        ConfigurableApplicationContext context <span style="color: #666666">=</span> SpringApplication.<span style="color: #7D9029">run</span>(App.<span style="color: #7D9029">class</span>, args);
 
-        // Ya tenemos la conexión con el broker, podemos enviar y leer mensajes
-        KafkaTemplate kafkaTemplate = context.getBean(KafkaTemplate.class);
+        <span style="color: #408080; font-style: italic">// Ya tenemos la conexión con el broker, podemos enviar y leer mensajes</span>
+        KafkaTemplate kafkaTemplate <span style="color: #666666">=</span> context.<span style="color: #7D9029">getBean</span>(KafkaTemplate.<span style="color: #7D9029">class</span>);
 
-        kafkaTemplate.send(&#34;pruebasKafka&#34;, &#34;Prueba de envío de mensaje&#34;);
+        kafkaTemplate.<span style="color: #7D9029">send</span>(<span style="color: #BA2121">&#34;pruebasKafka&#34;</span>, <span style="color: #BA2121">&#34;Prueba de envío de mensaje&#34;</span>);
 
     }
-}</pre>
+}</code></pre>
 </div>
 </div>
 </div>
